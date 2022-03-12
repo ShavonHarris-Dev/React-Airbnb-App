@@ -12,12 +12,9 @@ function App() {
   const cardElements = Data.map(card => {
     return <Card 
     key={card.id}
-    coverImg={card.coverImg} 
-    rating={card.stats.rating} 
-    reviewCount={card.stats.reviewCount}
-    location={card.location}
-    title={card.title}
-    price={card.price}
+    card={card}
+   
+    // give the prop name card the entire card object rather than listing them out by dot notation
     />
   })
   return (
@@ -33,9 +30,3 @@ function App() {
 
 export default App;
 
-//  img="katie-zaferes.png"
-// rating="5.0"
-// reviewCount={6}
-// location="USA"
-// title="Life Lessons with Katie Zaferes"
-// price={136}
